@@ -1,2 +1,2 @@
-# mustlog
-error-less go-kit/log extension
+# MustLog
+An error-less go-kit/log extension.
