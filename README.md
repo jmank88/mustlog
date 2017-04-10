@@ -1,4 +1,4 @@
-# MustLog [![GoDoc](https://godoc.org/github.com/jmank88/mustlog?status.svg)](https://godoc.org/github.com/jmank88/mustlog)
+# MustLog [![GoDoc](https://godoc.org/github.com/jmank88/mustlog?status.svg)](https://godoc.org/github.com/jmank88/mustlog) [![Go Report Card](https://goreportcard.com/badge/github.com/jmank88/mustlog)](https://goreportcard.com/report/github.com/jmank88/mustlog)
 An error-less go-kit/log extension.
 
 ## MustLogger
