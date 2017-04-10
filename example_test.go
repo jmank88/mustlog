@@ -9,11 +9,11 @@ func ExampleMustLogger() {
 	mustLogger := NewMustLogger(&errLogger{}, func(err error, keyvals ...interface{}) {
 		fmt.Println("failed to log:", err)
 	})
-	mustLogger.Log("k","v")
-	mustLogger.Log(poison,"poison")
+	mustLogger.Log("k", "v")
+	mustLogger.Log(poison, "poison")
 
-	mustLogger.Must("k","v")
-	mustLogger.Must(poison,"poison")
+	mustLogger.Must("k", "v")
+	mustLogger.Must(poison, "poison")
 
 	// Output:
 	// k v
@@ -26,16 +26,16 @@ func ExampleMustContext() {
 		fmt.Println("failed to log:", err)
 	})
 
-	mustContext.Must("k","v")
-	mustContext.Must(poison,"poison")
+	mustContext.Must("k", "v")
+	mustContext.Must(poison, "poison")
 
 	mustContext = mustContext.With("withK", "withV")
-	mustContext.Must("k","v")
-	mustContext.Must(poison,"poison")
+	mustContext.Must("k", "v")
+	mustContext.Must(poison, "poison")
 
 	mustContext = mustContext.WithPrefix("prefixK", "prefixV")
-	mustContext.Must("k","v")
-	mustContext.Must(poison,"poison")
+	mustContext.Must("k", "v")
+	mustContext.Must(poison, "poison")
 
 	// Output:
 	// k v
@@ -48,7 +48,7 @@ func ExampleMustContext() {
 
 var poison interface{} = nil
 
-type errLogger struct {}
+type errLogger struct{}
 
 func (*errLogger) Log(keyvals ...interface{}) error {
 	for _, v := range keyvals {

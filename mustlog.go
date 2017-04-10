@@ -11,7 +11,7 @@ type MustLogger struct {
 func NewMustLogger(logger log.Logger, onErr func(error, ...interface{})) *MustLogger {
 	return &MustLogger{
 		Logger: logger,
-		onErr: onErr,
+		onErr:  onErr,
 	}
 }
 
@@ -28,7 +28,7 @@ type MustContext struct {
 }
 
 func NewMustContext(l log.Logger, onErr func(error, ...interface{})) *MustContext {
-	return &MustContext{Context:log.NewContext(l), onErr: onErr}
+	return &MustContext{Context: log.NewContext(l), onErr: onErr}
 }
 
 func (c *MustContext) Must(keyvals ...interface{}) {
